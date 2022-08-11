@@ -9,6 +9,6 @@
  *
  * @return void
  */
-function create_route(string $type, string $name, $callback){
-    array_push(Controller::$route_list, new Route($type, $name, $callback));
+function create_route(string $method, string $name, $callback){
+    array_push(Controller::$route_list, new Route($method, $name, $callback));
 }

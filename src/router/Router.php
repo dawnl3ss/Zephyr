@@ -28,7 +28,7 @@ class Router implements RouterInterface {
      */
     public static function get(string $route, $callback) : Route {
         self::match('GET', $route, $callback);
-        return new Route($route);
+        return new Route('GET', $route, $callback);
     }
 
     /**
@@ -40,7 +40,7 @@ class Router implements RouterInterface {
      */
     public static function post(string $route, $callback) : Route {
         self::match('POST', $route, $callback);
-        return new Route($route);
+        return new Route('POST', $route, $callback);
     }
 
     /**
@@ -52,7 +52,7 @@ class Router implements RouterInterface {
      */
     public static function put(string $route, $callback) : Route {
         self::match('PUT', $route, $callback);
-        return new Route($route);
+        return new Route('PUT', $route, $callback);
     }
 
     /**
@@ -64,7 +64,7 @@ class Router implements RouterInterface {
      */
     public static function patch(string $route, $callback) : Route {
         self::match('PATCH', $route, $callback);
-        return new Route($route);
+        return new Route('PATCH', $route, $callback);
     }
 
     /**
@@ -76,7 +76,7 @@ class Router implements RouterInterface {
      */
     public static function delete(string $route, $callback) : Route {
         self::match('DELETE', $route, $callback);
-        return new Route($route);
+        return new Route('DELETE', $route, $callback);
     }
 
     /**
@@ -88,7 +88,7 @@ class Router implements RouterInterface {
      */
     public static function options(string $route, $callback) : Route {
         self::match('OPTIONS', $route, $callback);
-        return new Route($route);
+        return new Route('OPTIONS', $route, $callback);
     }
 
     /**
@@ -100,7 +100,7 @@ class Router implements RouterInterface {
      */
     public static function head(string $route, $callback) : Route {
         self::match('HEAD', $route, $callback);
-        return new Route($route);
+        return new Route('HEAD', $route, $callback);
     }
 
     /**

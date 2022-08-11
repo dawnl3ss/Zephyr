@@ -6,7 +6,7 @@ class Controller {
     public static $route_list = [];
 
     public static function __load(){
-
+        
     }
 
 }

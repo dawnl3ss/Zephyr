@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @param string $type
+ * @param string $method
  *
  * @param string $name
  *

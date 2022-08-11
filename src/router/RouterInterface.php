@@ -1,8 +1,5 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/app/Autoloader.php";
-__load_all_classes();
-
 interface RouterInterface {
 
     /**

@@ -10,5 +10,4 @@ class Controller {
             Router::{$route->get_method()}($route->get_route(), $route->get_callback());
         }
     }
-
 }

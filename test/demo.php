@@ -8,7 +8,7 @@ create_routes(
             "method" => METHOD_GET,
             "name" => "/route",
             "callback" => function(){
-                echo 'Here is my first route. <a href="/route/another-route"> test </a>';
+                echo 'Here is my first route. <a href="/route/another-route"> go ahead </a>';
             }
         ],
         [

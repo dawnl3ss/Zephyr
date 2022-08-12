@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . "/../router/route/Route.php";
+require_once __DIR__ . "/../router/Router.php";
+
 class Controller {
 
     /** @var Route[] $route_list */

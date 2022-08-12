@@ -1,6 +1,8 @@
 <?php
 
-class RouteCollector implements RouterInterface{
+require_once __DIR__ . "/../RouterInterface.php";
+
+class RouteCollector implements RouterInterface {
 
     /** @var string $base */
     private static string $base;

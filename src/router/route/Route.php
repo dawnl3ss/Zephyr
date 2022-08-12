@@ -12,7 +12,9 @@ class Route {
     private $callback;
 
     public function __construct(string $method, string $route, $callback){
+        $this->method = $method;
         $this->route = $route;
+        $this->callback = $callback;
     }
 
     /**

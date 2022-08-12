@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../router/route/Route.php";
+
 interface RouterInterface {
 
     /**

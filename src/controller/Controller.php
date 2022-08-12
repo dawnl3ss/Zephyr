@@ -13,4 +13,26 @@ class Controller {
             Router::{$route->get_method()}($route->get_route(), $route->get_callback());
         }
     }
+
+    /**
+     * @param string $method
+     *
+     * @param string $name
+     *
+     * @param $callback
+     *
+     * @return void
+     */
+    public static function create_route(string $method, string $name, $callback){
+        array_push(self::$route_list, new Route($method, $name, $callback));
+    }
+
+    /**
+     * @param array $routes
+     */
+    public static function create_routes(array $routes){
+        foreach ($routes as $route){
+            create_route($route["method"], $route["name"], $route["callback"]);
+        }
+    }
 }

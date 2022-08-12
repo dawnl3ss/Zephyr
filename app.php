@@ -10,6 +10,8 @@ const METHOD_PATCH = StandardMethods::METHOD_PATCH;
 const METHOD_DELETE = StandardMethods::METHOD_DELETE;
 
 /**
+ * Create an only Route
+ *
  * @param string $method
  *
  * @param string $name
@@ -18,16 +20,18 @@ const METHOD_DELETE = StandardMethods::METHOD_DELETE;
  *
  * @return void
  */
-function create_route(string $method, string $name, $callback){
-    array_push(Controller::$route_list, new Route($method, $name, $callback));
-}
+function create_route(string $method, string $name, $callback){ Controller::create_route($method, $name, $callback); }
 
-function create_routes(array $routes){
-    foreach ($routes as $route){
-        create_route($route["method"], $route["name"], $route["callback"]);
-    }
-}
+/**
+ * Create many Routes in one function
+ *
+ * @param array $routes
+ */
+function create_routes(array $routes){ Controller::create_routes($routes); }
 
-function load_routes(){
-    Controller::__load();
-}
+/**
+ * Load all Routes
+ *
+ * @return void
+ */
+function load_routes(){ Controller::__load(); }
